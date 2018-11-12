@@ -13,13 +13,13 @@ def get_image(student_id):
         #print(student_id)
 
         stuff_read = resource.read()
+        print('|{}|'.format(stuff_read))
 
         #print('{}\n\n'.format(stuff_read))
 
         if 'not found on this server' in stuff_read:
             #print('failed')
             return
-        print(stuff_read)        
         output = open("pics/{}.jpg".format(student_id),"wb")
         output.write(stuff_read)
         output.close()
