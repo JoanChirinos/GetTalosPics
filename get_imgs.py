@@ -9,9 +9,8 @@ print('Content-type: text/html\n\n')
 def get_image(student_id):
     try:
         url = 'https://talos.stuy.edu/static/img/id_pics/{}.jpg'.format(student_id)
-        print(url)
         resource = urllib.request.urlretrieve(url, "pics/{}.jpg".format(student_id))
-##        #print(student_id)
+##        print(student_id)
 ##
 ##        stuff_read = resource.read()
 ##        print('|{}|'.format(stuff_read))
