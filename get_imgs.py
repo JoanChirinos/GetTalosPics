@@ -39,7 +39,7 @@ def main():
     fs = cgi.FieldStorage()
     new_id = fs.getvalue('student_id', 210032785)
     student_id = int(new_id)
-    max_id = student_id + 100000
+    max_id = student_id + 1000
     while (student_id < max_id):
         get_image(student_id)
         student_id += 1
