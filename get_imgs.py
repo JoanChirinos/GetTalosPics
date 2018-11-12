@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 
-import urllib
+import urllib.request
 import cgi, cgitb
 cgitb.enable()
 
@@ -9,7 +9,7 @@ print('Content-type: text/html\n\n')
 def get_image(student_id):
     try:
         url = 'https://talos.stuy.edu/static/img/id_pics/{}.jpg'.format(student_id)
-        resource = urllib.urlopen(url)
+        resource = urllib.request.urlopen(url)
         #print(student_id)
 
         stuff_read = resource.read()
