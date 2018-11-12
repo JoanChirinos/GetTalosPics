@@ -10,7 +10,7 @@ def get_image(student_id):
     try:
         url = 'https://talos.stuy.edu/static/img/id_pics/{}.jpg'.format(student_id)
         resource = urllib.request.urlretrieve(url, "pics/{}.jpg".format(student_id))
-##        print(student_id)
+        print(student_id)
 ##
 ##        stuff_read = resource.read()
 ##        print('|{}|'.format(stuff_read))
@@ -39,7 +39,8 @@ def main():
     fs = cgi.FieldStorage()
     new_id = fs.getvalue('student_id', 210032785)
     student_id = int(new_id)
-    while (student_id < 209993647):
+    max_id = student_id + 100000
+    while (student_id < max_id):
         get_image(student_id)
         student_id += 1
     print('<br><br>Thanks')
