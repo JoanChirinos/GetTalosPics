@@ -9,20 +9,20 @@ print('Content-type: text/html\n\n')
 def get_image(student_id):
     try:
         url = 'https://talos.stuy.edu/static/img/id_pics/{}.jpg'.format(student_id)
-        resource = urllib.request.urlopen(url)
-        #print(student_id)
-
-        stuff_read = resource.read()
-        print('|{}|'.format(stuff_read))
-
-        #print('{}\n\n'.format(stuff_read))
-
-        if 'not found on this server' in stuff_read:
-            #print('failed')
-            return
-        output = open("pics/{}.jpg".format(student_id),"wb")
-        output.write(stuff_read)
-        output.close()
+        resource = urllib.request.urlretrieve(url, "pics/{}.jpg".format(student_id))
+##        #print(student_id)
+##
+##        stuff_read = resource.read()
+##        print('|{}|'.format(stuff_read))
+##
+##        #print('{}\n\n'.format(stuff_read))
+##
+##        if 'not found on this server' in stuff_read:
+##            #print('failed')
+##            return
+##        output = open("pics/{}.jpg".format(student_id),"wb")
+##        output.write(stuff_read)
+##        output.close()
     except Exception as e:
         print('failed')
         print(student_id)
