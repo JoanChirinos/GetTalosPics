@@ -23,9 +23,15 @@ def get_image(student_id):
         output = open("pics/{}.jpg".format(student_id),"wb")
         output.write(stuff_read)
         output.close()
-    except:
+    except Exception as e:
         print('failed')
         print(student_id)
+        print('<br>')
+        if hassattr(e, 'message'):
+            print(e.message)
+        else:
+            print(e)
+        print('<br><br>')
         return
 
 def main():
