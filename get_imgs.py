@@ -19,7 +19,7 @@ def get_image(student_id):
         if 'not found on this server' in stuff_read:
             #print('failed')
             return
-        
+        print(resource)        
         output = open("pics/{}.jpg".format(student_id),"wb")
         output.write(stuff_read)
         output.close()
