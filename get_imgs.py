@@ -27,7 +27,7 @@ def get_image(student_id):
         print('failed')
         print(student_id)
         print('<br>')
-        if hassattr(e, 'message'):
+        if hasattr(e, 'message'):
             print(e.message)
         else:
             print(e)
