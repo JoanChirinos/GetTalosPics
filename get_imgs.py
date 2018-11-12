@@ -39,7 +39,7 @@ def main():
     fs = cgi.FieldStorage()
     new_id = fs.getvalue('student_id', 210032785)
     student_id = int(new_id)
-    while (True):
+    while (student_id < 209993647):
         get_image(student_id)
         student_id += 1
     print('<br><br>Thanks')
