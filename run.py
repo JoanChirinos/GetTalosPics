@@ -12,7 +12,7 @@ def go():
             except Exception as e:
                 print(e)
                 print('FAILED AT ~ {}'.format(student_id))
-            student_id += 100
+            student_id += 1
 ##        time.sleep(18)
 ##        os.system("killall -9 'Google Chrome'")
 
