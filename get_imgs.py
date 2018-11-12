@@ -24,14 +24,14 @@ def get_image(student_id):
 ##        output.write(stuff_read)
 ##        output.close()
     except Exception as e:
-        print('failed')
-        print(student_id)
-        print('<br>')
-        if hasattr(e, 'message'):
-            print(e.message)
-        else:
-            print(e)
-        print('<br><br>')
+##        print('failed')
+##        print(student_id)
+##        print('<br>')
+##        if hasattr(e, 'message'):
+##            print(e.message)
+##        else:
+##            print(e)
+##        print('<br><br>')
         return
 
 def main():
