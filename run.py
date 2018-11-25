@@ -4,8 +4,9 @@ def go(sid):
 ##    student_id = 211938341
 ##    student_id = 212115686
     student_id = int(sid)
-    max = student_id + 1000
-    while (True):
+    max = student_id + 1
+    while (student_id < max):
+##        print(student_id)
 ##        for i in range(20):
 ##            webbrowser.open('http://homer.stuy.edu/~jchirinos/GetTalosPics/get_imgs.py?student_id={}'.format(student_id), new=2)
         url = 'http://homer.stuy.edu/~jchirinos/GetTalosPics/get_imgs.py?student_id={}'.format(student_id)
