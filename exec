@@ -1,5 +1,5 @@
 #! /bin/bash
-for i in {220265638..230110571..1}
+for i in {220319857..230110571..1}
 do
 	python3 run.py $i &
 done
